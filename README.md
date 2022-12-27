@@ -2,11 +2,11 @@
 
 Responsive Page using React, Html5 and CSS3
 
-# Live preview :
+## Live preview :
 
 https://amrhassanahg.github.io/Kasper-One-Page-Creative-Template/
 
-# Following this template :
+## Following this template :
 
 https://www.graphberry.com/item/kasper-one-page-psd-template
 
