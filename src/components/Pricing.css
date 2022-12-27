@@ -1,0 +1,90 @@
+.pricing {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+}
+
+.pricing .plans {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.pricing .plans .plan {
+    text-align: center;
+    background-color: #FCFCFC;
+}
+.pricing .plans .plan .head {
+    padding: 40px 0;
+    border-top: 1px solid var(--main-color, #19c8fa);
+    border-bottom: 1px solid var(--main-color, #19c8fa);
+}
+.pricing .plans .plan .head h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.pricing .plans .plan .head span {
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.pricing .plans .plan span::before {
+    content: attr(coin);
+    position: relative;
+    font-size: 1.3rem;
+    top: -30px;
+    left: -10px;
+    font-weight: normal;
+}
+.pricing .plans .plan span::after {
+    content: '/Mo';
+    position: relative;
+    font-size: 1.2rem;
+    right: -10px;
+}
+.pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color, #19c8fa);
+}
+.pricing .plans .plan ul li {
+    position: relative;
+    padding: 20px;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    background-color: var(--main-color, #19c8fa);
+    position: absolute;
+    width: 140px;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+.pricing .plans .plan a {
+    display: block;
+    margin: 30px auto;
+    border: 1px solid var(--main-color, #19c8fa);
+    padding: 15px 20px;
+    width: fit-content;
+}
+.pricing .plans .plan a:hover {
+    background-color: var(--main-color, #19c8fa);
+    color: white;
+}
+
+.pricing .contact-text {
+    margin: 40px auto 20px auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.pricing .contact-link {
+    display: block;
+    padding: 15px 25px;
+    border-radius: 4px;
+    width: fit-content;
+    background-color: var(--main-color, #19c8fa);
+    color: white;
+    margin: auto;
+}
+.pricing .contact-link:hover {
+    box-shadow: 0 0 5px 1px #087e9e;
+}

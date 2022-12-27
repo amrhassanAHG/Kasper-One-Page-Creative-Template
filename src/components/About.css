@@ -1,0 +1,19 @@
+.about {
+    padding-top: var(--section-padding, 100px);
+    overflow: hidden;
+    text-align: center;
+}
+.about img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -140px;
+    max-width: 100%;
+}
+
+/* Start Media Query */
+@media (max-width:575px) {
+    .about img {
+        bottom: -60px;
+        margin-top: -70px;
+    }
+}

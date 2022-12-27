@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Start imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* End imports */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Start variables */
+:root {
+  --main-color: #19c8fa;
+  --main-duration: 0.3s;
+  --transparent-color: rgb(15, 116, 143, 70%);
+  --section-padding: 100px;
+  --p-color: #777;
+  --line-height: 2;
+  --background-color: #1f2021;
+  --overlay-color: rgb(0, 0, 0, 60%);
 }
+/* End variables */
+
+/* Start Global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* iPad Screens */
+@media (min-width:576px) {
+  .container {
+    width: 560px;
+  }
+}
+/* Small Screens */ 
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium Screens */
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global rules  */
+
+/* Start Components */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    position: relative;
+}
+.main-heading h2::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: #333;
+}
+.main-heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: white;
+}
+.main-heading p {
+  width: 550px;
+  line-height: var(--line-height, 2);
+  max-width: 100%;
+  color: var(--p-color, #777);
+  margin: 0 auto 100px;
+}
+/* End Components */
+

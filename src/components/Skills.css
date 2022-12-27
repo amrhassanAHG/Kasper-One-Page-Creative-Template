@@ -1,0 +1,117 @@
+.our-skills {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+}
+.our-skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.our-skills .container > div > h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.our-skills .container > div > p {
+    color: var(--p-color, #777);
+    line-height: var(--line-height, 2);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-skills .testimonials .content {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.our-skills .testimonials .content img {
+    width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-top: -20px;
+}
+.our-skills .testimonials .content .text {
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;   
+}
+.our-skills .testimonials .content .text p {
+    text-align: right;
+    color: var(--p-color, #777);
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.our-skills .testimonials .bullets {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.our-skills .testimonials .bullets li {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.our-skills .testimonials .bullets li.active {
+    background-color: var(--main-color, #19c8fa);
+    border-color: var(--main-color, #19c8fa);
+}
+
+.our-skills .skills .prog-holder {
+    margin-bottom: 30px;
+}
+.our-skills .skills .prog-holder h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 15px;  
+}
+.our-skills .skills .prog-holder .prog {
+    background-color: #dedadc;
+    height: 30px;
+}
+.our-skills .skills .prog-holder .prog span {
+    background-color: var(--main-color, #19c8fa);
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.our-skills .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    right: -20px;
+    top: -32px;
+    padding: 3px 4px;
+    border-radius: 4px ;
+}
+.our-skills .skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: black ;
+    right: -3px;
+    top: -8px;
+}
+
+/* Start Media Query */
+@media (max-width:992px) {
+    .our-skills .testimonials .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .our-skills .testimonials .content img {
+        margin: 0 auto 20px;
+    }
+    .our-skills .skills {
+        margin-top: 20px;
+    }
+}
+@media (min-width:992px) {
+    .our-skills .container > div {
+        flex-basis: 45%;
+    }
+}
