@@ -32,6 +32,9 @@ header nav {
     justify-content: flex-end;
     align-items: center;
 }
+header nav .fa-bars {
+    width: "fit-content";
+}
 header nav .toggle-menu {
     font-size: 1.4rem;
     color: white;
@@ -75,12 +78,9 @@ header nav .form .search {
 
 /* Start Media Query */
 /* Phone & iPad Screens */
-@media (max-width:768px) {
+@media (max-width:767px) {
     header nav ul {
         display: none;
-    }
-    header nav .toggle-menu:hover + ul, header nav ul:hover {
-        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;

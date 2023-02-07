@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,17 +8,52 @@ import logo from "../assets/images/logo.png";
 const Header = () => {
   const [activeId, setActiveId] = useState(0);
   const [moving, setMoving] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const menu = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      // console.log(window.scrollY);
+      // setting header status while scroling
       if (window.scrollY > 120) {
         if (!moving) setMoving((oldMoving) => true);
       } else {
         if (moving) setMoving((oldMoving) => false);
       }
+      // setting active id for each section while scrolling
+      if (window.scrollY >= 7250) {
+        setActiveId((oldId) => 5);
+      } else if (window.scrollY >= 6115) {
+        setActiveId((oldId) => 4);
+      } else if (window.scrollY >= 3860) {
+        setActiveId((oldId) => 3);
+      } else if (window.scrollY >= 2080) {
+        setActiveId((oldId) => 2);
+      } else if (window.scrollY >= 590) {
+        setActiveId((oldId) => 1);
+      } else {
+        setActiveId((oldId) => 0);
+      }
     });
-  });
+    // setting menu appearance when clicking outside it
+    window.addEventListener("click", (e) => {
+      if (window.innerWidth < 768) {
+        if (e.target.classList.contains("link")) return;
+        else if (e.target.parentElement.classList.contains("fa-bars")) {
+          setOpenMenu((oldOpenMenu) => !oldOpenMenu);
+        } else {
+          setOpenMenu(() => false);
+        }
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth < 768 && !openMenu) {
+      menu.current.style.display = "none";
+    } else {
+      menu.current.style.display = "flex";
+    }
+  }, [openMenu]);
 
   return (
     <header className={moving ? "moving-background" : undefined}>
@@ -27,8 +62,10 @@ const Header = () => {
           <img src={logo} alt="Logo" />
         </a>
         <nav>
-          <FontAwesomeIcon icon={faBars} className="toggle-menu" />
-          <ul>
+          <div className="fa-bars">
+            <FontAwesomeIcon icon={faBars} className="toggle-menu" />
+          </div>
+          <ul ref={menu}>
             {[
               "home",
               "services",
@@ -40,7 +77,7 @@ const Header = () => {
               <li key={id}>
                 <a
                   href={id === 0 ? "#" : `#${name}`}
-                  className={activeId === id ? "active" : undefined}
+                  className={`link ${activeId === id ? "active" : undefined}`}
                   onClick={(e) => setActiveId((oldId) => id)}
                 >
                   {name}
