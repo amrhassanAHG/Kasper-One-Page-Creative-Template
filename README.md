@@ -2,7 +2,7 @@
 
 Responsive Page using React, Html5 and CSS3
 
-## Live preview :
+## Demo :
 
 https://amrhassanahg.github.io/Kasper-One-Page-Creative-Template/
 
