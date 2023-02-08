@@ -81,6 +81,9 @@ header nav .form .search {
 @media (max-width:767px) {
     header nav ul {
         display: none;
+    }
+    header nav ul.open-menu {
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;

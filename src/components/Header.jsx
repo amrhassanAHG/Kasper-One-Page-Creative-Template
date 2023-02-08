@@ -9,17 +9,16 @@ const Header = () => {
   const [activeId, setActiveId] = useState(0);
   const [moving, setMoving] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  const menu = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       // setting header status while scroling
       if (window.scrollY > 120) {
-        if (!moving) setMoving((oldMoving) => true);
+        setMoving((oldMoving) => true);
       } else {
-        if (moving) setMoving((oldMoving) => false);
+        setMoving((oldMoving) => false);
       }
-      // setting active id for each section while scrolling
+      //setting active id for each section while scrolling
       if (window.scrollY >= 7250) {
         setActiveId((oldId) => 5);
       } else if (window.scrollY >= 6115) {
@@ -47,14 +46,6 @@ const Header = () => {
     });
   }, []);
 
-  useEffect(() => {
-    if (window.innerWidth < 768 && !openMenu) {
-      menu.current.style.display = "none";
-    } else {
-      menu.current.style.display = "flex";
-    }
-  }, [openMenu]);
-
   return (
     <header className={moving ? "moving-background" : undefined}>
       <div className="container">
@@ -65,7 +56,7 @@ const Header = () => {
           <div className="fa-bars">
             <FontAwesomeIcon icon={faBars} className="toggle-menu" />
           </div>
-          <ul ref={menu}>
+          <ul className={openMenu ? "open-menu" : undefined}>
             {[
               "home",
               "services",
