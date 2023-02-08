@@ -65,7 +65,6 @@ const Header = () => {
             ref={barsIcon}
             icon={faBars}
             className="toggle-menu"
-            style={{ display: "block" }}
           />
           <FontAwesomeIcon
             ref={xmarkIcon}
