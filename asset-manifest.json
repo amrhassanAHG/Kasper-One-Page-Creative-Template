@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Kasper-One-Page-Creative-Template/static/css/main.6accef54.css",
+    "main.js": "/Kasper-One-Page-Creative-Template/static/js/main.5f400837.js",
+    "static/media/awesome-video.mp4": "/Kasper-One-Page-Creative-Template/static/media/awesome-video.82171d25d328fd1174a9.mp4",
+    "static/media/stats.png": "/Kasper-One-Page-Creative-Template/static/media/stats.a508b84400efad055f18.png",
+    "static/media/subscribe.jpg": "/Kasper-One-Page-Creative-Template/static/media/subscribe.1e24fcea5980ced232ec.jpg",
+    "static/media/landing.jpg": "/Kasper-One-Page-Creative-Template/static/media/landing.15c0fabc946b186ba9ff.jpg",
+    "static/media/shuffle-04.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-04.6d7e182a18ea24cca56e.jpg",
+    "static/media/shuffle-03.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-03.86d2bd3c0488370fd6e9.jpg",
+    "static/media/shuffle-07.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-07.867a17697548514ceca6.jpg",
+    "static/media/design-features.jpg": "/Kasper-One-Page-Creative-Template/static/media/design-features.f62b2e28d39b5c35c9c4.jpg",
+    "static/media/shuffle-08.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-08.9809975e18cc6c8a4343.jpg",
+    "static/media/shuffle-01.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-01.87e9a5849e2f71a925a0.jpg",
+    "static/media/shuffle-02.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-02.b28e84c174ac76b229db.jpg",
+    "static/media/shuffle-06.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-06.9cf9ddda1c805f1264eb.jpg",
+    "static/media/quote.jpg": "/Kasper-One-Page-Creative-Template/static/media/quote.429d009ecb9a02e9b317.jpg",
+    "static/media/shuffle-05.jpg": "/Kasper-One-Page-Creative-Template/static/media/shuffle-05.34159d0a63059a63093b.jpg",
+    "static/media/skills-01.jpg": "/Kasper-One-Page-Creative-Template/static/media/skills-01.55db4d284f4a0c2b93ed.jpg",
+    "static/media/skills-02.jpg": "/Kasper-One-Page-Creative-Template/static/media/skills-02.ba3dc59103361136769c.jpg",
+    "index.html": "/Kasper-One-Page-Creative-Template/index.html",
+    "main.6accef54.css.map": "/Kasper-One-Page-Creative-Template/static/css/main.6accef54.css.map",
+    "main.5f400837.js.map": "/Kasper-One-Page-Creative-Template/static/js/main.5f400837.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6accef54.css",
+    "static/js/main.5f400837.js"
+  ]
+}
