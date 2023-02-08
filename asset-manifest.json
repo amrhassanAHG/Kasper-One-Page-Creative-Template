@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Kasper-One-Page-Creative-Template/static/css/main.96f947d3.css",
-    "main.js": "/Kasper-One-Page-Creative-Template/static/js/main.19f9a5b9.js",
+    "main.js": "/Kasper-One-Page-Creative-Template/static/js/main.caa9bb99.js",
     "static/media/awesome-video.mp4": "/Kasper-One-Page-Creative-Template/static/media/awesome-video.82171d25d328fd1174a9.mp4",
     "static/media/stats.png": "/Kasper-One-Page-Creative-Template/static/media/stats.a508b84400efad055f18.png",
     "static/media/subscribe.jpg": "/Kasper-One-Page-Creative-Template/static/media/subscribe.1e24fcea5980ced232ec.jpg",
@@ -20,10 +20,10 @@
     "static/media/skills-02.jpg": "/Kasper-One-Page-Creative-Template/static/media/skills-02.ba3dc59103361136769c.jpg",
     "index.html": "/Kasper-One-Page-Creative-Template/index.html",
     "main.96f947d3.css.map": "/Kasper-One-Page-Creative-Template/static/css/main.96f947d3.css.map",
-    "main.19f9a5b9.js.map": "/Kasper-One-Page-Creative-Template/static/js/main.19f9a5b9.js.map"
+    "main.caa9bb99.js.map": "/Kasper-One-Page-Creative-Template/static/js/main.caa9bb99.js.map"
   },
   "entrypoints": [
     "static/css/main.96f947d3.css",
-    "static/js/main.19f9a5b9.js"
+    "static/js/main.caa9bb99.js"
   ]
 }
