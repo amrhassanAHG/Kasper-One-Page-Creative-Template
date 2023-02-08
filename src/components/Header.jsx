@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.css";
 import logo from "../assets/images/logo.png";
@@ -9,6 +9,8 @@ const Header = () => {
   const [activeId, setActiveId] = useState(0);
   const [moving, setMoving] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const barsIcon = useRef(null);
+  const xmarkIcon = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -36,11 +38,17 @@ const Header = () => {
     // setting menu appearance when clicking outside it
     window.addEventListener("click", (e) => {
       if (window.innerWidth < 768) {
-        if (e.target.classList.contains("link")) return;
-        else if (e.target.parentElement.classList.contains("fa-bars")) {
-          setOpenMenu((oldOpenMenu) => !oldOpenMenu);
+        if (
+          e.target.classList.contains("fa-bars") ||
+          e.target.parentElement.classList.contains("fa-bars")
+        ) {
+          setOpenMenu(() => true);
+          barsIcon.current.style.display = "none";
+          xmarkIcon.current.style.display = "block";
         } else {
           setOpenMenu(() => false);
+          xmarkIcon.current.style.display = "none";
+          barsIcon.current.style.display = "block";
         }
       }
     });
@@ -53,9 +61,18 @@ const Header = () => {
           <img src={logo} alt="Logo" />
         </a>
         <nav>
-          <div className="fa-bars">
-            <FontAwesomeIcon icon={faBars} className="toggle-menu" />
-          </div>
+          <FontAwesomeIcon
+            ref={barsIcon}
+            icon={faBars}
+            className="toggle-menu"
+            style={{ display: "block" }}
+          />
+          <FontAwesomeIcon
+            ref={xmarkIcon}
+            icon={faXmark}
+            className="toggle-menu"
+            style={{ display: "none" }}
+          />
           <ul className={openMenu ? "open-menu" : undefined}>
             {[
               "home",

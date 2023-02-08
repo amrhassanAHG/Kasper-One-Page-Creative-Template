@@ -32,7 +32,7 @@ header nav {
     justify-content: flex-end;
     align-items: center;
 }
-header nav .fa-bars {
+header nav .fa-bars, header nav .fa-xmark {
     width: "fit-content";
 }
 header nav .toggle-menu {
